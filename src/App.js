@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import "./App.css";
 import { makeStyles } from "@material-ui/core/styles";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../src/component/Home";
 
 import "../src/styles/Custom.css";
@@ -164,7 +164,7 @@ function App() {
   return (
 
 
-    <BrowserRouter>
+    <HashRouter>
       <ToastContainer />
 
       <Routes>
@@ -490,7 +490,7 @@ function App() {
         />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
 
 
   );

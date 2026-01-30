@@ -17,7 +17,7 @@ import Listmenusec from "./Innernenu";
 import Countdown from "react-countdown";
 
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
+// import PhoneInput from "react-phone-number-input";
 
 const Completionist = () => <span></span>;
 

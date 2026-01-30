@@ -5,7 +5,7 @@ import Header from "./Header";
 import Countdown from "react-countdown";
 import Footer from "./Footer";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
+// import PhoneInput from "react-phone-number-input";
 import Slider from "react-slick";
 import ForgetInput from "./ForgetInput";
 import { toastAlert } from "../lib/toastAlert";

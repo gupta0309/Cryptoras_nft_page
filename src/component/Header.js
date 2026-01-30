@@ -201,7 +201,7 @@ function Header(props) {
                     </li>
                   ) : (
                     <li class="nav-item" role="presentation">
-                      <NavLink className="nav-link" to="/walletConnect">
+                      <NavLink className="nav-link" to="/explore">
                         EXPLORE
                       </NavLink>
                     </li>

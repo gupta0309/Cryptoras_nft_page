@@ -31,7 +31,7 @@ import creator from "../image/creater11.jpg";
 import fanse from "../image/creater1.jpg";
 import vision from "../image/vision.jpg";
 import startted from "../image/startted.png";
-import roadmap from "../image/roadmap1.png";
+import roadmap from "../image/roadmap11.png";
 
 const Completionist = () => <span></span>;
 

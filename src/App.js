@@ -50,7 +50,7 @@ import Connect_wlle from "./component/Connect_wlle";
 import Profile from "../src/component/Profile";
 import EditProfile from "../src/component/EditProfile";
 import EditProfileOTP from "../src/component/EditProfileOTP";
-import CreateNewItem from "../src/component/CreateNewItem";
+// import CreateNewItem from "../src/component/CreateNewItem";
 import CreateNewItemtwo from "../src/component/CreateNewItemtwo";
 import CreateNewItemthree from "../src/component/CreateNewItemthree";
 import Dashboard from "../src/component/Dashboard";
@@ -71,12 +71,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import AdminUsers from "./component/AdminUsers";
 import Movies from "./component/Movies";
-import AdminCreateMovie from "./component/AdminCreateMovie";
+// import AdminCreateMovie from "./component/AdminCreateMovie";
 import AdminCreateJoner from "./component/AdminCreateJoner";
 import AdminCreateCategory from "./component/AdminCreateCategory";
 import AdminMovieList from "./component/AdminMovieList";
 import AdminCreateNFTCategory from "./component/AdminCreateNFTCategory";
-import AdminCreateNFTCollection from "./component/AdminCreateNFTCollection";
+// import AdminCreateNFTCollection from "./component/AdminCreateNFTCollection";
 import AdminDashboard from "./component/AdminDashboard";
 import AdminRevenueAddFund from "./component/AdminRevenueAddFund";
 import AdminRightsDistribution from "./component/AdminRightsDistribution";
@@ -168,7 +168,7 @@ function App() {
       <ToastContainer />
 
       <Routes>
-        <Route path="/" element={<LoginPage />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Landing />} />
         <Route path="/register" element={<Register />} />
         <Route path="/loginPage" element={<LoginPage />} />
@@ -220,14 +220,14 @@ function App() {
             </RequireAuth>
           }
         />
-        <Route
+        {/* <Route
           path="/createNewItem"
           element={
             <RequireAuth>
               <CreateNewItem />
             </RequireAuth>
           }
-        />
+        /> */}
         <Route path="/createNewItemtwo" element={<CreateNewItemtwo />} />
         <Route
           path="/createNewItemthree"
@@ -365,7 +365,7 @@ function App() {
         {/* <Route path="/AdminCreateMovie" element={<AdminCreateMovie />} /> */}
 
 
-        <Route
+        {/* <Route
           path="/AdminCreateMovie"
           element={
             // UserDatas.userRole === "user" ?
@@ -386,7 +386,7 @@ function App() {
                 <AdminCreateMovie />
               </RequireAuth>
           }
-        />
+        /> */}
 
         <Route path="/AdminCreateJoner"
           element={
@@ -428,7 +428,7 @@ function App() {
               </RequireAuth>
           }
         />
-        <Route
+        {/* <Route
           path="/AdminCreateNFTCollection"
           element={
             // UserDatas.userRole === "user" ?
@@ -438,7 +438,7 @@ function App() {
                 <AdminCreateNFTCollection />
               </RequireAuth>
               }
-        />
+        /> */}
         <Route
           path="/AdminDashboard"
           element={

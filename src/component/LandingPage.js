@@ -24,14 +24,16 @@ import cib_telegram from "../image/newimg/cib_telegram-plane.png"
 import symbols_brightness from "../image/newimg/material-symbols_brightness-medium.png"
 import mdi_twitter from "../image/newimg/mdi_twitter.png"
  
-import landingBg from "../image/bg.jpg"; 
-import twosec from "../image/twosec1.jpg";
-import community from "../image/community.jpg";
-import creator from "../image/creater11.jpg";
-import fanse from "../image/creater1.jpg";
-import vision from "../image/vision.jpg";
+
+import vision from "../image/newimg/about2.png";
 import startted from "../image/startted.png";
 import roadmap from "../image/roadmap11.png";
+// import img1 from "../image/newimg/home.jpg";
+// import img2 from "../image/newimg/home.jpg";
+import img3 from "../image/newimg/home.jpg";
+
+
+
 
 const Completionist = () => <span></span>;
 
@@ -85,146 +87,66 @@ function LandingPage() {
     <>
       <Header />
       <main className="pading-landin">
-        <section className="home_first_section" style={{
-    backgroundImage: `url(${landingBg})`,
-    backgroundSize: "cover",       // ensures the image covers the entire section
-    backgroundPosition: "center",  // centers the image
-    backgroundRepeat: "no-repeat",
-    height: "100vh",               // makes the section take full viewport height
-  }}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12">
-                <div
-                  className="landing_content"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <h1>
-                  Discover, Collect, and Trade Exclusive NFTs <span>While Empowering Creative Communities.</span>
-                  </h1>
-                  <p>
-                   Connect with Artists, Collect Rare NFTs, and Showcase Your Digital World.
-                    <br />
-                   Experience, Own, and Trade One-of-a-Kind Digital Art Collections Today.
-                  </p>
-                  {authToken === false ? (
-                  <Button onClick={navPage}>Join us</Button>
-                  ) : ("")}
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div className="image_banner">
 
-            <img
-              src={group_1}
-              alt=""
-              className=""
-              data-aos="fade-up"
-              data-aos-duration="3000"
-            />
-          </div> */}
-        </section>
-        <section className="sectionne home_second_section">
-          <div className="container">
-            <div
-              className="title_conten"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              data-aos-easing="ease-out-cubic"
-            >
-              <h2 className="headeing_boreder">For</h2>
-            </div>
-            <div className="row mt-5">
-              <div className="col-lg-3">
-                <img
-                  src={twosec}
-                  alt=""
-                  id="twosecimg"
-                  className="h-100 "
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                />
-              </div>
-              <div className="col-lg-9">
-                <div
-                  className="box_for_what"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <div className="first_child1">
-                    <img
-                      src={creator}
-                      alt=""
-                      className=""
-                    />
-                  </div>
-                  <div className="title_for_what">
-                    <h3>NFT Creators</h3>
-                    <p>
-                     Empowering creators in Web 3.0 with ownership and monetization. Launch your NFTs on Cryptora to showcase digital art, music, or collectibles, and grow your audience while earning directly from your work.
-                    </p>
-                  </div>
-                  {authToken === false ? (
-                  <div className="button_sections">
-                    <Button onClick={navPage}>Join Now</Button>
-                  </div>
-                  ) : ("")}
-                </div>
-                <div
-                  className="box_for_what"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <div className="first_child1">
-                    <img
-                      src={fanse}
-                      alt=""
-                      className="clas_img_i"
-                    />
-                  </div>
-                  <div className="title_for_what">
-                    <h3>NFT Fans</h3>
-                    <p>
-                     Collect, support, and engage! Unlock exclusive NFTs, participate in fan challenges, and enjoy special rewards as you connect with your favorite creators in the Cryptora ecosystem.
-                    </p>
-                  </div>
-                  {authToken === false ? (
-                  <div className="button_sections">
-                    <Button onClick={navPage}>Join Now</Button>
-                  </div>
-                  ) : ("")}
-                </div>
-                <div
-                  className="box_for_what"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <div className="first_child1">
-                    <img
-                      src={community}
-                      alt=""
-                      className=""
-                    />
-                    {/* <i className="fa-regular fa-user"></i> */}
-                  </div>
-                  <div className="title_for_what">
-                    <h3>NFT Community</h3>
-                    <p>
-                    Connect, share, and discover. Join a vibrant community where creators tell the stories behind their NFTs, fans engage meaningfully, and everyone grows together in the world of Web 3.0.
-                    </p>
-                  </div>
-                  {authToken === false ? (
-                  <div className="button_sections">
-                    <Button onClick={navPage}>Join Now</Button>
-                  </div>
-                  ) : ("")}
-                </div>
-              </div>
-            </div>
+
+
+   <section className="home_first_section">
+    <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/dollar.png" className="floating-icon icon-left-top" alt="dollar" />
+  <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/btc.png" className="floating-icon icon-right-top" alt="btc" />
+  <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/eth.png" className="floating-icon icon-right-bottom" alt="eth" />
+
+
+  <div className="container">
+    <div className="row align-items-center">
+      {/* LEFT TEXT */}
+      <div className="col-lg-6">
+        <div className="landing_content" data-aos="fade-up">
+          <h1>
+            <span style={{color: '#f8a13c'}}>Create</span>, Collect And <br />
+            <span style={{color: '#f8a13c'}}>Sell</span> Digital Items.
+          </h1>
+          <p>
+            Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens. 
+            Buy, Sell, And Discover Exclusive Digital Assets.
+          </p>
+          
+          <div className="btn_group">
+            <button className="explore_btn" onClick={navPage}>Explore</button>
+            <button className="create_btn">Create</button>
           </div>
-        </section>
+        </div>
+      </div>
+
+      {/* RIGHT IMAGE STACK */}
+      <div className="col-lg-6">
+        <div className="image_stack">
+          {/* Ensure these images have a dark background/border like the "Black Cat" card */}
+          <img src="" className="stack_img img1" alt="" />
+          <img src="" className="stack_img img2" alt="" />
+          <img src={img3} className="stack_img img3" alt="NFT 3" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
         <section className="sectionne button_looff">
           <div className="container">
             <div className="row">
@@ -235,7 +157,7 @@ function LandingPage() {
                   data-aos-duration="2000"
                   data-aos-easing="ease-out-cubic"
                 >
-                  <h2 className="headeing_boreder">Our Vision</h2>
+                  <h2 className="headeing_boreder">ABOUT US</h2>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -258,8 +180,9 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <p>
-                   our vision is to create a vibrant digital ecosystem where creators, collectors, and communities thrive together. We aim to empower artists by giving them ownership of their work while providing fans with unique ways to engage, support, and discover digital assets. We believe NFTs are more than just collectibles—they are tools for creative expression, community building, and meaningful engagement. Our platform bridges the gap between creators and their audiences, making it easy to showcase talent, monetize creativity, and participate in an inclusive digital world.
-                  </p>
+                  Welcome to Cryptora NFT, a dynamic digital marketplace where art, technology, and blockchain innovation come together. Cryptora NFT is built to empower creators and collectors by providing a secure, transparent, and user-friendly platform to explore, buy, sell, and trade unique digital assets.
+
+At Cryptora NFT, we believe in the power of decentralized technology to transform digital ownership. Every NFT on our platform is backed by blockchain technology, ensuring authenticity, security, and true ownership for users across the globe. Our marketplace is designed to support digital artists, gamers, creators, and collectors who want to be part of the future of digital collectibles.    </p>
                   <div className="our_focus">
                     <h4>Our Focus</h4>
                     <ul>
@@ -282,6 +205,10 @@ function LandingPage() {
             </div>
           </div>
         </section>
+
+
+
+{/* 
         <section className="sectionne button_looffaaa">
           <div className="container">
             <div className="row">
@@ -349,6 +276,62 @@ function LandingPage() {
             </div>
           </div>
         </section>
+ */}
+
+
+<section className="minting_section">
+  <div className="container">
+    {/* Section Header */}
+    <div className="section_header" data-aos="fade-down">
+      <span className="subtitle">SIMPLE STEPS</span>
+      <h2 className="title">HOW IT WORKS</h2>
+    </div>
+
+    {/* Steps Grid */}
+    <div className="steps_container">
+      
+      {/* Step 1 */}
+      <div className="step_card step_1" data-aos="fade-right" data-aos-delay="100">
+        <div className="step_content">
+          <h3>Connect Wallet</h3>
+          <span className="emoji_icon">👋</span>
+        </div>
+      </div>
+
+      {/* Step 2 */}
+      <div className="step_card step_2" data-aos="fade-right" data-aos-delay="200">
+        <div className="step_content">
+          <h3>Select Your Quantity</h3>
+          <span className="emoji_icon">👉</span>
+        </div>
+      </div>
+
+      {/* Step 3 */}
+      <div className="step_card step_3" data-aos="fade-right" data-aos-delay="300">
+        <div className="step_content">
+          <h3>Transaction Confirm</h3>
+          <span className="emoji_icon">👍</span>
+        </div>
+      </div>
+
+      {/* Step 4 */}
+      <div className="step_card step_4" data-aos="fade-right" data-aos-delay="400">
+        <div className="step_content">
+          <h3>Receive Your NFTs</h3>
+          <span className="emoji_icon">😊</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+        
         <section className="sectionnee button_looffaaa bg_coloeee">
           <div className="container">
             <div className="row">

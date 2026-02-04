@@ -342,7 +342,7 @@ At Cryptora NFT, we believe in the power of decentralized technology to transfor
                   data-aos-duration="2000"
                   data-aos-easing="ease-out-cubic"
                 >
-                  <h2 className="headeing_boreder">Roadmap</h2>
+                  <h2 className="headeing_boreder">ROADMAP</h2>
                 </div>
               </div>
               <div className="col-lg-6">

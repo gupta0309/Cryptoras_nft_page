@@ -317,7 +317,7 @@ At Cryptora NFT, we believe in the power of decentralized technology to transfor
       {/* Step 4 */}
       <div className="step_card step_4" data-aos="fade-right" data-aos-delay="400">
         <div className="step_content">
-          <h3>Receive Your NFTs</h3>
+          <h3>Receive Your NFTs  </h3>
           <span className="emoji_icon">😊</span>
         </div>
       </div>

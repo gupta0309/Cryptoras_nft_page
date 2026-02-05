@@ -168,7 +168,7 @@ function Home() {
 
         <div className="container">
           <div className="home_header latest_header">
-            <h1>Collections</h1>
+            <h1>This is Our Collection</h1>
             <div className="menu_sec">
               <Listmenusec />
             </div>

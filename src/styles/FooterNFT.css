@@ -1,7 +1,8 @@
 .footer {
-  background: #1c1d20;
+  background: #000000;
   color: #ffffff;
   padding: 60px 80px 20px;
+  border: 1px solid #f2522e;
   font-family: "Poppins", sans-serif;
 }
 
@@ -10,7 +11,7 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 40px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #000;
   padding-bottom: 40px;
 }
 

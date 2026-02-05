@@ -25,15 +25,68 @@ import symbols_brightness from "../image/newimg/material-symbols_brightness-medi
 import mdi_twitter from "../image/newimg/mdi_twitter.png"
  
 
-import vision from "../image/newimg/about2.png";
+import vision from "../image/newimg/about-img.png";
 import startted from "../image/startted.png";
 import roadmap from "../image/roadmap11.png";
 // import img1 from "../image/newimg/home.jpg";
 // import img2 from "../image/newimg/home.jpg";
 import img3 from "../image/newimg/home.jpg";
+    import one from "../image/logo/one.png";
+    import two from "../image/logo/two.png";
+    import three from "../image/logo/three.png";
+    import four from "../image/logo/four.png";
+import work from "../image/newimg/work.jpg";
+const cards = [
+    {
+      title: "Platform Launch",
+      points: [
+        "Launch Cryptora NFT Marketplace",
 
+        "Wallet Integration (MetaMask, WalletConnect)",
 
+        "Core NFT Buy, Sell & Mint Features",
+"Initial NFT Collection Drops",
 
+"Community Building & Early Access Programs"
+      ],
+      btnText: "Phase 1"
+    },
+    {
+      title: "Growth & Expansion",
+      points: [
+       "Multi-Chain Support (Ethereum, Polygon, etc.)",
+
+"Creator Launchpad & NFT Tools",
+
+"Advanced Marketplace Features (Auction, Offers, Bundles)",
+"Mobile App Development",
+
+"Strategic Partnerships & Collaborations",
+      ],
+      btnText: "Phase 2"
+    },
+    {
+      title: "Future Ecosystem",
+      points: [
+       "Metaverse NFT Integration",
+
+"NFT Staking & Rewards System",
+
+"DAO Governance & Community Voting",
+
+"Global NFT Events & Virtual Experiences",
+"Full Web3 Ecosystem Expansion"
+      ],
+      btnText: "Phase 3"
+    }
+  ];
+
+    const features = [
+    { title: "Connect Your Wallet", desc: "Link your crypto wallet securely (MetaMask, WalletConnect, etc.) to access the Cryptora NFT platform and manage your digital assets.", icon:<i className="fa-solid fa-wallet" style={{color: "#F28705"}}></i> },
+    { title: "Discover Exclusive NFTs", desc: "Explore verified, high-quality NFT collections from top creators. Every NFT is unique, authentic, and secured on the blockchain.", icon: <i className="fa-solid fa-magnifying-glass" style={{color: "#F28705"}}></i> },
+    { title: "Buy, Sell, or Mint", desc: "Purchase rare NFTs, sell your assets to global collectors, or mint your own NFTs and launch your digital collection on Cryptora.", icon:  <i className="fa-solid fa-coins" style={{color: "#F28705"}}></i> },
+    { title: "Own & Trade Anytime", desc: "Your NFTs are stored safely in your wallet. Hold, trade, or resell anytime while enjoying access to future Cryptora ecosystem benefits.", icon:  <i className="fa-solid fa-shield-halved" style={{color: "#F28705"}}></i> }
+  ];
 
 const Completionist = () => <span></span>;
 
@@ -89,122 +142,119 @@ function LandingPage() {
       <main className="pading-landin">
 
 
-
-   <section className="home_first_section">
-    <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/dollar.png" className="floating-icon icon-left-top" alt="dollar" />
-  <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/btc.png" className="floating-icon icon-right-top" alt="btc" />
-  <img src="https://wowtheme7.com/tf/cryptmeme/cryptmeme/assets/images/profit/eth.png" className="floating-icon icon-right-bottom" alt="eth" />
-
-
-  <div className="container">
-    <div className="row align-items-center">
-      {/* LEFT TEXT */}
-      <div className="col-lg-6">
-        <div className="landing_content" data-aos="fade-up">
-          <h1>
-            <span style={{color: '#f8a13c'}}>Create</span>, Collect And <br />
-            <span style={{color: '#f8a13c'}}>Sell</span> Digital Items.
+<section className="hero-container">
+      <div className="hero-content">
+        {/* Left Side: Text and Search */}
+        <div className="hero-left">
+          <h1 className="hero-title">
+            <span className="purple-gradient">NFT</span> <br />
+            For The <span className="text-white">NEXT</span> <br />
+            Generation
           </h1>
-          <p>
-            Digital Marketplace For Crypto Collectibles And Non-Fungible Tokens. 
-            Buy, Sell, And Discover Exclusive Digital Assets.
+          <p className="hero-description">
+            NFTs Are Currently Taking The Digital Art And Collectibles World By Storm. 
+            Digital Artists Are Seeing Their Lives Change Thanks To Huge Sales To A 
+            New Crypto Audience.
           </p>
-          
-          <div className="btn_group">
-            <button className="explore_btn" onClick={navPage}>Explore</button>
-            <button className="create_btn">Create</button>
+
+          <div className="search-container">
+            <button className="btn-explore btn-pulse">EXPLORE</button>
+            <div className="search-bar">
+              <input type="text" placeholder="Search Here..." />
+              <button className="btn-search btn-shimmer">Search</button>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side: Image and Stats */}
+        <div className="hero-right">
+          <div className="image-wrapper">
+            <img 
+              src={img3} 
+              alt="NFT Artwork" 
+              className="main-nft-img" 
+            />
+            <div className="stat-badge badge-top">
+              <span className="stat-number">800K</span>
+              <span className="stat-label">Active Artworks</span>
+            </div>
+            <div className="stat-badge badge-bottom">
+              <span className="stat-number">+90k</span>
+              <span className="stat-label">Active Artist</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* RIGHT IMAGE STACK */}
-      <div className="col-lg-6">
-        <div className="image_stack">
-          {/* Ensure these images have a dark background/border like the "Black Cat" card */}
-          <img src="" className="stack_img img1" alt="" />
-          <img src="" className="stack_img img2" alt="" />
-          <img src={img3} className="stack_img img3" alt="NFT 3" />
-        </div>
+      {/* Footer Brands */}
+   <div className="marquee-container">
+  {/* The fixed label on the left */}
+ 
+  <div className="marquee-wrapper">
+    <div className="marquee-content">
+      {/* Group 1 */}
+      <div className="brand-group">
+        <div className="brand-logo"><img src={one} alt="Cardano" /></div>
+        <div className="brand-logo"><img src={two} alt="Coinbase" /></div>
+        <div className="brand-logo"><img src={three} alt="Binance" /></div>
+        <div className="brand-logo"><img src={four} alt="Solana" /></div>
+      </div>
+      
+      {/* Group 2 (Exact Duplicate) */}
+      <div className="brand-group">
+        <div className="brand-logo"><img src={one} alt="Cardano" /></div>
+        <div className="brand-logo"><img src={two} alt="Coinbase" /></div>
+        <div className="brand-logo"><img src={three} alt="Binance" /></div>
+        <div className="brand-logo"><img src={four} alt="Solana" /></div>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-
-
-
-
-        
-
-
-
-
-
-
-
-
+    </section>
 
 
 
         
-        <section className="sectionne button_looff">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 mb-5">
-                <div
-                  className="title_conten"
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                  data-aos-easing="ease-out-cubic"
-                >
-                  <h2 className="headeing_boreder">ABOUT US</h2>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div
-                  className="contanddd_ff"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <img
-                    src={vision}
-                    alt=""
-                    className="vision_img"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div
-                  className="contnetee_d"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <p>
-                  Welcome to Cryptora NFT, a dynamic digital marketplace where art, technology, and blockchain innovation come together. Cryptora NFT is built to empower creators and collectors by providing a secure, transparent, and user-friendly platform to explore, buy, sell, and trade unique digital assets.
 
-At Cryptora NFT, we believe in the power of decentralized technology to transform digital ownership. Every NFT on our platform is backed by blockchain technology, ensuring authenticity, security, and true ownership for users across the globe. Our marketplace is designed to support digital artists, gamers, creators, and collectors who want to be part of the future of digital collectibles.    </p>
-                  <div className="our_focus">
-                    <h4>Our Focus</h4>
-                    <ul>
-                      <li>
-                        <i class="fa-regular fa-star"></i>
-                        NFT Creation{" "}
-                      </li>
-                      <li>
-                       <i class="fa-regular fa-star"></i>
-                        Fan Engagement
-                      </li>
-                      <li>
-                       <i class="fa-regular fa-star"></i>
-                         Community Building{" "}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+
+
+
+
+
+
+
+
+
+
+        <section className="car-section">
+      <div className="car-container">
+        {/* Left Side: Image with Reflection */}
+        <div className="car-image-side">
+          <img 
+            src={vision} 
+            alt="Yellow Brand Car" 
+            className="car-main-img" 
+          />
+          <div className="car-reflection"></div>
+        </div>
+
+        {/* Right Side: Text Content */}
+        <div className="car-text-side">
+          <h2 className="car-title">
+            Hight <span className="highlight-yellow">Quality</span>  <br />
+            NFT Collection
+          </h2>
+          <p className="car-description">
+           Step into the future of digital ownership with Cryptora NFT. Discover exclusive, high-value NFT assets crafted for collectors, investors, and creators. Our limited collections combine cutting-edge blockchain technology with premium digital artistry.
+          </p>
+          
+          <button className="btn-get-started">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
 
 
 
@@ -278,135 +328,78 @@ At Cryptora NFT, we believe in the power of decentralized technology to transfor
         </section>
  */}
 
+<section className="defi-container">
+      <div className="defi-content">
+        {/* Left Side: Info */}
+        <div className="defi-info">
+          <h2 className="defi-heading">
+            How <span className="text-gray">Cryptora NFT </span> 
+              Works
+          </h2>
+          <p className="defi-subtext">
+           Cryptora makes NFT ownership easy and secure. Connect your wallet, explore exclusive NFTs, and buy, sell, or mint digital assets — all powered by blockchain technology.  </p>
 
-<section className="minting_section">
-  <div className="container">
-    {/* Section Header */}
-    <div className="section_header" data-aos="fade-down">
-      <span className="subtitle">SIMPLE STEPS</span>
-      <h2 className="title">HOW IT WORKS</h2>
-    </div>
+          <div className="features-grid">
+            {features.map((f, i) => (
+              <div key={i} className="feature-card">
+                <div className="feature-texts">
+                <div className="feature-icon">{f.icon}</div>
+                  <h3>{f.title}</h3>
+                  <p>{f.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-    {/* Steps Grid */}
-    <div className="steps_container">
-      
-      {/* Step 1 */}
-      <div className="step_card step_1" data-aos="fade-right" data-aos-delay="100">
-        <div className="step_content">
-          <h3>Connect Wallet</h3>
-          <span className="emoji_icon">👋</span>
+        {/* Right Side: 3D Circles */}
+        <div className="defi-visual">
+          {/* <div className="circle-stack">
+            <div className="circle main-circle">90%</div>
+            <div className="circle floating-circle top-left">60%</div>
+            <div className="circle floating-circle top-right">50%</div>
+            <div className="circle floating-circle bottom-right">40%</div>
+          </div> */}
+          <img src={work} alt="3D Circles" className="defi-3d-img" />
         </div>
       </div>
-
-      {/* Step 2 */}
-      <div className="step_card step_2" data-aos="fade-right" data-aos-delay="200">
-        <div className="step_content">
-          <h3>Select Your Quantity</h3>
-          <span className="emoji_icon">👉</span>
-        </div>
-      </div>
-
-      {/* Step 3 */}
-      <div className="step_card step_3" data-aos="fade-right" data-aos-delay="300">
-        <div className="step_content">
-          <h3>Transaction Confirm</h3>
-          <span className="emoji_icon">👍</span>
-        </div>
-      </div>
-
-      {/* Step 4 */}
-      <div className="step_card step_4" data-aos="fade-right" data-aos-delay="400">
-        <div className="step_content">
-          <h3>Receive Your NFTs  </h3>
-          <span className="emoji_icon">😊</span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
 
 
 
 
 
         
-        <section className="sectionnee button_looffaaa bg_coloeee">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-12 mb-5">
-                <div
-                  className="title_conten"
-                  data-aos="fade-up"
-                  data-aos-duration="2000"
-                  data-aos-easing="ease-out-cubic"
-                >
-                  <h2 className="headeing_boreder">ROADMAP</h2>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div
-                  className="contanddd_ff"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <img
-                    src={
-                      roadmap
-                    }
-                    alt=""
-                    className="roadmap_img"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div
-                  className="road_map_fram d-flex"
-                  data-aos="fade-up"
-                  data-aos-duration="3000"
-                >
-                  <div>
-                    <img
-                      src={line_frame}
-                      alt=""
-                      className="imag_colrr"
-                    />
-                  </div>
-                  <div className="datat_frame">
-                    <div className="contnte_dtata">
-                      <h4>Phase 1</h4>
-                      <ul>
-                        <li>Onboarding the core team and engineers.</li>
-                        <li>Designing the UI/UX of the Website</li>
-                        <li>Web 3 Integration</li>
-                      </ul>
-                    </div>
-                    <div className="contnte_dtata">
-                      <h4>Phase 2</h4>
-                      <ul>
-                        <li>Testing the architecture of the Marketplace</li>
-                        <li>Release of Fantically Litepaper</li>
-                        <li>Launch of Fantically Beta in Q1 of 2023</li>
-                      </ul>
-                    </div>
-                    <div className="contnte_dtata">
-                      <h4>Phase 3</h4>
-                      <ul>
-                        <li>Community event in Q2 of 2023</li>
-                        <li>
-                          Onboarding Web 3 influencers to promote the Community
-                        </li>
-                        <li>Release of Fantically Whitepaper</li>
-                        <li>Launch of Fantically in Q2 of 2023</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+      <section className="finance-section">
+  <div className="finance-header">
+    <h2 className="finance-title">Roadmap</h2>
+  </div>
+
+  <div className="finance-grid">
+    {cards.map((card, index) => (
+      <div key={index} className="finance-card">
+        <div className="card-bg-glow"></div>
+        <div className="card-content">
+          {/* Phase Button at the top */}
+          <button className="card-btn">{card.btnText}</button>
+          
+          <h3 className="card-title">{card.title}</h3>
+          
+          {/* Context List instead of a single paragraph */}
+          <ul className="card-list">
+            {card.points.map((point, i) => (
+              <li key={i} className="list-item">{point}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+
         <section className="sectionnee">
           <div className="container">
             <div className="row">

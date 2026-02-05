@@ -8,8 +8,8 @@
 
 :root {
   --background-color: #000000;
-  --background-color-gray: #212125;
-  --background-color-lightgray: #373737;
+  --background-color-gray: #000;
+  --background-color-lightgray: #000;
   --background-color-red: #F28705;
   --text-red: #F28705;
   --text-light-red: #F2522E;
@@ -1311,6 +1311,7 @@ header {
   align-items: center;
 }
 .home_header h1 {
+  padding: 20px;
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
@@ -5972,6 +5973,727 @@ img.marehbivc {
   50% { transform: translateY(-10px) rotate(10deg); }
 }
 
+:root {
+  --bg-dark: #050508;
+  --accent-purple: #8a2be2;
+  --text-gray: #a0a0a0;
+}
+
+.hero-container {
+  background-color: #050508;
+  color: white;
+  padding: 80px 10%;
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Text Styles */
+.hero-left { flex: 1; }
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.purple-gradient {
+  background: linear-gradient(to right, #f28705, #f2522e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  color: #a0a0a0;
+  max-width: 450px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0; /* Start invisible for animation */
+  animation: fadeInUp 0.8s ease-out 0.2s forwards; /* 0.2s delay */
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+/* Search & Buttons */
+.search-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.btn-explore {
+  background: transparent;
+  border: 1px solid #f2522e;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-shimmer {
+  position: relative;
+  overflow: hidden; /* Clips the light streak */
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(30deg);
+  transition: all 0.6s ease;
+}
+
+.btn-shimmer:hover::after {
+  left: 120%; /* Moves the streak across the button on hover */
+}
+
+/* 2. Pulse Glow Effect (For the Search Button) */
+.btn-pulse {
+  background: transparent;
+  box-shadow: #f2522e;
+  animation: pulse 2s infinite;
+  transition: transform 0.2s ease;
+}
+
+.btn-pulse:hover {
+  transform: scale(1.05); /* Slight pop on hover */
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #f2522e;
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(242, 82, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(242, 82, 46, 0);
+  }
+}
+
+/* 3. Magnetic Hover for Explore */
+.btn-explore:hover {
+  border-color: #f2522e;
+  color: #f2522e;
+  text-shadow: 0 0 8px rgba(242, 82, 46, 0.6);
+}
+
+.search-bar {
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #f2522e;
+  border-radius: 12px;
+  padding: 5px;
+  flex: 1;
+}
+
+.search-bar input {
+  background: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+  outline: none;
+  flex: 1;
+}
+
+.btn-search {
+  background: #f28705;
+  color: white;
+  border: 1px solid #f28705;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Right Side Image & Floating Badges */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-wrapper {
+  position: relative;
+  box-shadow: 5px 5px 30px #f2522e; /* Purple Glow */
+  border-radius: 20px;
+}
+
+.main-nft-img {
+  width: 400px;
+  border-radius: 20px;
+  display: block;
+}
+
+.stat-badge {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-top { top: 40px; right: -30px; }
+.badge-bottom { bottom: 150px; right: -40px; }
+
+.stat-number { font-weight: bold; font-size: 1.2rem; }
+.stat-label { font-size: 0.7rem; color: #a0a0a0; }
+
+.marquee-container {
+  display: flex;
+  align-items: center;
+  background: #000;
+  padding: 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.marquee-label {
+  color: #888;
+  font-size: 1.1rem;
+  padding: 0 40px;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  ); /* Adds a nice fade on the edges */
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+.brand-group {
+  display: flex;
+  align-items: center;
+  gap: 100px; /* Large gap between logos */
+  padding-right: 100px;
+}
+
+.brand-logo img {
+  height: 35px; /* Adjust based on your logo sizes */
+  width: auto;
+  filter: grayscale(1) brightness(0.8); /* Makes them look uniform */
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.brand-logo img:hover {
+  filter: grayscale(0) brightness(1);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Stops animation when user wants to look closer */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* --- The Magic Scroll Animation --- */
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly half the width to loop perfectly */
+  }
+}
+
+.defi-container {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 8%;
+  font-family: 'Inter', sans-serif;
+}
+
+.defi-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.defi-info { flex: 1; }
+
+.defi-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.text-gray { color: #f28705; }
+
+.defi-subtext {
+  color: #888;
+  max-width: 500px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.feature-card {
+  display: flex;
+  gap: 15px;
+}
+
+.feature-icon {
+  background: #000;
+  /* background: rgba(255, 255, 255, 0.05); */
+  padding: 10px;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.feature-texts h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.feature-texts p {
+  color: #777;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* 3D Visual Section */
+.defi-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.circle-stack {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background: #111;
+  /* This creates the 'stacked coin' 3D effect */
+  box-shadow: 
+    4px 4px 0px #222, 
+    8px 8px 15px rgba(0,0,0,0.8),
+    inset 1px 1px 2px rgba(255,255,255,0.1);
+  transition: transform 0.3s ease;
+}
+
+.main-circle {
+  width: 180px;
+  height: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-size: 2.5rem;
+  border: 1px solid #333;
+}
+
+.floating-circle {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #222;
+}
+
+.top-left { top: 10%; left: 10%; animation: float 4s infinite ease-in-out; }
+.top-right { top: 15%; right: 10%; animation: float 4s infinite ease-in-out 1s; }
+.bottom-right { bottom: 10%; right: 20%; animation: float 4s infinite ease-in-out 2s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* --- Container Setup --- */
+.finance-section {
+  background-color: #000;
+  padding: 0px 8%;
+  color: white;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.finance-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #fff, #f28705);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+}
+
+/* --- Grid Layout --- */
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+/* --- The Always Animated Card --- */
+.finance-card {
+  position: relative;
+  background: #0a0a0a; 
+  border-radius: 24px;
+  padding: 40px 30px;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Optional: Entrance Fade-in */
+  animation: cardFadeIn 0.8s ease-out forwards;
+}
+
+/* 1. The Rotating Border (Always On) */
+.finance-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    rgba(163, 88, 30, 0.4), 
+    #a3581e, 
+    rgba(163, 88, 30, 0.4),
+    transparent 40%
+  );
+  animation: rotateBorder 4s linear infinite; /* Hamesha chalta rahega */
+  z-index: -2;
+  transition: filter 0.3s ease;
+}
+
+/* 2. Inner Mask (Creates the 2px border width) */
+.finance-card::after {
+  content: '';
+  position: absolute;
+  inset: 2px; 
+  background: #0a0a0a;
+  border-radius: 22px;
+  z-index: -1;
+}
+
+/* --- Hover Effects --- */
+.finance-card:hover {
+  transform: translateY(-12px);
+}
+
+.finance-card:hover::before {
+  /* Hover pe border aur zyada glowing dikhega */
+  filter: brightness(1.5) contrast(1.2);
+  box-shadow: 5px 5px 20px #f2522e;
+  animation-duration: 2s; /* Speed up on hover for more energy */
+}
+
+/* --- Internal Content --- */
+.card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.card-desc {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* --- Pill Button --- */
+.card-btn {
+  background: linear-gradient(135deg, #a3581e, #633611);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(163, 88, 30, 0.3);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.card-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(163, 88, 30, 0.6);
+}
+
+
+.card-list{text-align: left;}
+/* --- Keyframe Animations --- */
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .defi-content { flex-direction: column; text-align: center; }
+  .features-grid { grid-template-columns: 1fr; }
+  .defi-subtext { margin: 0 auto 50px; }
+  .circle-stack { transform: scale(0.8); }
+  .defi-heading { font-size: 2.2rem; text-align: left;}
+  .defi-container { padding: 80px 5%; }
+}
+
+
+/* --- Entrance Animations --- */
+
+/* Slide and Fade for the whole info section */
+.defi-info {
+  animation: fadeInBlur 1s ease-out forwards;
+}
+
+/* Staggered reveal for feature cards */
+.feature-card {
+  border: 1px solid #f2522e;
+  padding: 10px;
+  opacity: 0;
+  border-radius: 15px;
+  transform: translateY(20px);
+  animation: revealCard 0.6s ease-out forwards;
+}
+
+/* Delaying each card for a 'waterfall' effect */
+.feature-card:nth-child(1) { animation-delay: 0.2s; }
+.feature-card:nth-child(2) { animation-delay: 0.4s; }
+.feature-card:nth-child(3) { animation-delay: 0.6s; }
+.feature-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInBlur {
+  from {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes revealCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Enhanced 3D Visual Animations --- */
+
+.circle-stack {
+  perspective: 1000px; /* Gives the container 3D depth */
+}
+
+.circle {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Interaction: Lift and Glow on hover */
+.circle:hover {
+  transform: scale(1.1) translateZ(20px);
+  box-shadow: 
+    0px 0px 20px rgba(255, 255, 255, 0.2),
+    10px 10px 0px #333;
+  cursor: pointer;
+}
+
+/* Unique Floating Paths for each circle */
+.top-left { animation: floatDiagonal 6s infinite ease-in-out; }
+.top-right { animation: floatVertical 5s infinite ease-in-out 0.5s; }
+.bottom-right { animation: floatHorizontal 7s infinite ease-in-out 1s; }
+
+@keyframes floatDiagonal {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, -20px); }
+}
+
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25px); }
+}
+
+@keyframes floatHorizontal {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(15px) translateY(-10px); }
+}
+
+/* --- Icon Pulse --- */
+.feature-icon {
+  /* transition: transform 0.3s ease; */
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(15deg) scale(1.2);
+  background: transparent;
+}
+/* --- RESPONSIVE MEDIA QUERIES --- */
+
+/* For Tablets and smaller laptops */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .main-nft-img {
+    width: 350px;
+  }
+}
+
+/* For Mobile Devices (Stacking layout) */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 40px 5%;
+  }
+
+  .hero-content {
+    flex-direction: column; /* Stacks text on top of image */
+    text-align: center;
+    gap: 60px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .search-bar {
+    width: 100%;
+    display: block;
+  }
+
+  .hero-right {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .main-nft-img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .badge-top { right: -10px; }
+  .badge-bottom { right: -20px; bottom: 80px; }
+
+  .hero-footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .brands {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* For small mobile screens */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+    text-align: left;
+  }
+.hero-description{
+  text-align: left;
+}
+  .stat-badge {
+    padding: 8px;
+  }
+
+  .stat-number {
+    font-size: 1rem;
+  }
+}
+
+
+/* Pause on hover so users can read */
+.marquee-content:hover {
+  animation-play-state: paused;
+}
 /* Responsive fix for mobile */
 @media (max-width: 1200px) {
   .step_card {
@@ -6070,7 +6792,131 @@ img.marehbivc {
     padding: 6px 0px;
   }
 }
+.car-section {
+  background-color: #000;
+  padding: 0px 8%;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
 
+.car-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* --- Left Side: Image & Effects --- */
+.car-image-side {
+  flex: 1.2;
+  position: relative;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.car-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 2;
+  position: relative;
+}
+
+/* Creating the floor reflection effect */
+.car-reflection {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to bottom, #f2522e, transparent);
+  filter: blur(15px);
+  transform: scaleY(-1);
+  opacity: 0.3;
+}
+
+/* --- Right Side: Typography --- */
+.car-text-side {
+  flex: 0.8;
+  animation: fadeInRight 1s ease-out;
+}
+
+.car-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.car-description {
+  color: #888;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+/* --- The Specialized Button --- */
+.btn-get-started {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 15px 45px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  /* The Offset Shadow from the image */
+  box-shadow: -8px 8px 0px #f28705; 
+}
+
+.btn-get-started:hover {
+  transform: translate(4px, -4px);
+  box-shadow: -12px 12px 0px #f28705;
+}
+
+.btn-get-started:active {
+  transform: translate(-2px, 2px);
+  box-shadow: -2px 2px 0px #f28705;
+}
+
+/* --- Animations --- */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .car-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .car-title { font-size: 2.5rem; text-align: left; align-items: left;}
+  
+  .car-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .car-section { padding: 0px 5%; }
+  .car-title { font-size: 2rem; text-align: left;}
+  .car-main-img{
+    display: none;
+  }
+}
 @media (max-width: 991px) {
   .banner_slide .slick-track {
     height: auto;

@@ -6616,7 +6616,9 @@ img.marehbivc {
   .hero-container {
     padding: 40px 5%;
   }
-
+.finance-title{
+    font-size: 36px;
+}
   .hero-content {
     flex-direction: column; /* Stacks text on top of image */
     text-align: center;

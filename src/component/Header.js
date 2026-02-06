@@ -148,8 +148,8 @@ function Header(props) {
         <div className="w-100">
           <nav class="navbar navbar-light navbar-expand-xl navigation-clean-search">
             <div class="container-fluid">
-              <a class="navbar-brand" href="https://cinestarnft.io/">
-
+              {/* <a class="navbar-brand" href="/home"> */}
+<Link className="navbar-brand" to="/home">
                 <img
                   src={Fantically_logo_1}
                   alt=""
@@ -159,7 +159,8 @@ function Header(props) {
                   src={require("../image/newimg/fc2@2x.png").default}
                   className=""
                 /> */}
-              </a>
+              {/* </a> */}
+              </Link>
               <button
                 data-toggle="collapse"
                 class="navbar-toggler"

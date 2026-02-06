@@ -549,10 +549,10 @@ function Home() {
                                   )
                                 })
                               ) : (
-                                <div className="col-lg-3">No Datas found</div>
+                                <div className="col-lg-3"> </div>
                               )
                               }
-                              {/* <div className="col-lg-3">
+                              <div className="col-lg-3">
                                 <div className="card-Trending ">
                                   <div className="positionreel">
                                     <div className="countown">
@@ -564,11 +564,7 @@ function Home() {
                                     </div>
                                     <Link to="" className="imgconyeea">
                                       <img
-                                        src={
-                                          require("../image/newimg/geomatry.png")
-                                            .default
-                                        }
-                                        className=""
+                                        src="https://artlogic-res.cloudinary.com/w_1200,c_limit,f_auto,fl_lossy,q_auto/ws-artlogicwebsite0889/usr/images/news/main_image/6/nft-bored-ape-yacht-club.png"       className=""
                                       />
                                     </Link>
 
@@ -613,11 +609,11 @@ function Home() {
                                     </span>
                                   </div>
                                 </div>
-                              </div> */}
+                              </div>
                             </div>
                           </div>
                         </div>
-                        {/* <div id="Premium" class="tab-pane fade">
+                        <div id="Premium" class="tab-pane fade">
                           <div className="row">
                             <div className="col-lg-3">
                               <div className="card-Trending ">
@@ -631,10 +627,7 @@ function Home() {
                                   </div>
                                   <Link to="" className="imgconyeea">
                                     <img
-                                      src={
-                                        require("../image/newimg/geomatry.png")
-                                          .default
-                                      }
+                                      src="https://www.thedigitalspeaker.com/content/images/2022/07/Five-NFT-Challenges.webp"
                                       className=""
                                     />
                                   </Link>
@@ -656,10 +649,7 @@ function Home() {
                                   <span className="name_item">
                                     Geometry
                                     <img
-                                      src={
-                                        require("../image/newimg/uil_comment-verify.png")
-                                          .default
-                                      }
+                                      src="https://fivmagazine.com/wp-content/uploads/2022/04/nft-non-fungible-token-token-collection-bored-ape-yacht-club-example-army-monkey.jpg"
                                       className=""
                                     />
                                   </span>
@@ -1188,7 +1178,7 @@ function Home() {
                               </div>
                             </div>
                           </div>
-                        </div> */}
+                        </div>
                       </div>
                     </div>
 

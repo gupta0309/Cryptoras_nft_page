@@ -6434,7 +6434,7 @@ img.marehbivc {
 
 /* --- Hover Effects --- */
 .finance-card:hover {
-  transform: translateY(-12px);
+  transform: translateY(-12px) #f2522e; /* Lift up and add a subtle shadow */
 }
 
 .finance-card:hover::before {
@@ -7877,7 +7877,7 @@ a.music {
   color: var(--text-red);
 }
 .NFT-details_section {
-  padding: 38px 0px;
+  padding: 38px 40px;
 }
 .NFT-details_section h3 {
   font-weight: 500;

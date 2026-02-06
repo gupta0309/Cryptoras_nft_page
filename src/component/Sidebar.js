@@ -100,7 +100,7 @@ function Sidebar() {
       </div>
 
       <div className="side_bar_new">
-        <a href="https://cinestarnft.io/">
+        <a href="/home">
           <img src={Logo} alt="logo" class="img-fluid logo" />
         </a>
 

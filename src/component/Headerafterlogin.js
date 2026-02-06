@@ -36,6 +36,7 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import Dropdown from "react-dropdown";
 import { env } from "../service/envConfig";
 import Explore from "./Explore";
+import { HashLink } from "react-router-hash-link";
 
 import {
   ScrollingProvider,
@@ -284,7 +285,7 @@ function Header() {
         <div className="w-100">
           <nav class="navbar navbar-light navbar-expand-xl navigation-clean-search">
             <div class="container-fluid">
-              <a class="navbar-brand gradion_text hideweb" href="https://cinestarnft.io/">
+              <HashLink className="navbar-brand gradion_text hideweb" to="/home">
 
                 <img
                   src={Fantically_logo_1}
@@ -295,7 +296,7 @@ function Header() {
                   src={require("../image/newimg/fc2@2x.png").default}
                   className=""
                 /> */}
-              </a>
+              </HashLink>
 
               <button
                 data-toggle="collapse"
@@ -469,7 +470,7 @@ function Header() {
                   
 
                   <li class="nav-item hideweb" role="presentation">
-                    <NavLink className="nav-link" to="https://cinestarnft.io/">
+                    <NavLink className="nav-link" to="/home">
                       HOME
                     </NavLink>
                   </li>

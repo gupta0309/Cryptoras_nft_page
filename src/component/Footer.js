@@ -326,6 +326,8 @@ import React from "react";
 import "../styles/FooterNFT.css";
 import logo from "../image/logo/nft logo.png"
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
@@ -335,7 +337,9 @@ const Footer = () => {
         {/* Left Section */}
         <div className="footer-brand">
           <div className="logo">
+            <Link to="/home">
             <img src={logo} alt="Cryptora NFT" />
+            </Link>
             {/* <h2>Cryptora <span>NFT</span></h2> */}
           </div>
           <p>
@@ -348,10 +352,10 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Marketplace</h3>
           <ul>
-            <li>Explore</li>
-            <li>Create NFT</li>
-            <li>Collection</li>
-            <li>Rankings</li>
+           <Link to="/explore"><li>Explore</li></Link>
+            <Link to="/dashboard"><li>Dashboard</li></Link>
+            <Link to="/collection"><li>Collection</li></Link>
+            <Link to="/activebids"><li>Active Bids</li></Link>
           </ul>
         </div>
 
@@ -359,8 +363,8 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Company</h3>
           <ul>
-            <li>About Us</li>
-            <li>Careers</li>
+            <HashLink to="#about-section"><li>About Us</li></HashLink>
+            <HashLink to="#roadmap-section"><li>Roadmap</li></HashLink>
           </ul>
         </div>
 
@@ -368,8 +372,8 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Stats</h3>
           <ul>
-            <li>My Activity</li>
-            <li>History</li>
+           <Link to="/UserRevenue"><li>Revenue</li></Link>
+            <Link to="/history"><li>History</li></Link>
           </ul>
         </div>
       </div>

@@ -227,7 +227,7 @@ function LandingPage() {
 
 
 
-        <section className="car-section">
+        <section className="car-section" id="about-section">
       <div className="car-container">
         {/* Left Side: Image with Reflection */}
         <div className="car-image-side">
@@ -372,7 +372,7 @@ function LandingPage() {
         
       <section className="finance-section">
   <div className="finance-header">
-    <h2 className="finance-title">Roadmap</h2>
+    <h2 className="finance-title" id="roadmap-section">Roadmap</h2>
   </div>
 
   <div className="finance-grid">
@@ -405,7 +405,7 @@ function LandingPage() {
             <div className="row">
               <div className="col-lg-12 mb-5">
                 <div className="text_ovefr_wriye">
-                  <h3>_Community</h3>
+                  <h3> ____</h3>
                   <span>
                     Join the Fantically <br />
                     Community{" "}
